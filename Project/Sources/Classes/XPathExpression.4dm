@@ -33,12 +33,12 @@ Function with(/*XPathFragment xpathFragment*/)
 	This:C1470.xpathFragments.push($1)
 	$0:=This:C1470
 	
-Function is(/*String value*/)->XPathPredicate
+Function is //(/*String value*/)->XPathPredicate
 	C_OBJECT:C1216($0)
 	C_TEXT:C284($1)
 	$0:=cs:C1710.XPathPredicate.new().static_equalTo($1).decorate(This:C1470)
 	
-Function atIndex(/*int index*/)->XPathExpression
+Function atIndex //(/*int index*/)->XPathExpression
 	C_OBJECT:C1216($0)
 	C_LONGINT:C283($1)
 	$0:=cs:C1710.XPathPredicate.new().static_index($1).decorate(This:C1470)
