@@ -15,7 +15,7 @@ Class constructor
 			This:C1470.xpathFragments:=New collection:C1472()
 	End case 
 	
-Function toXPath()  // implements XPathFragment
+Function toXPath // ()  // implements XPathFragment
 	C_TEXT:C284($0;$xpath)
 	$xpath:=""
 	C_OBJECT:C1216($xpathFragment)
@@ -28,7 +28,7 @@ Function toXPath()  // implements XPathFragment
 	End for each 
 	$0:=$xpath
 	
-Function with(/*XPathFragment xpathFragment*/)
+Function with // (/*XPathFragment xpathFragment*/)
 	C_OBJECT:C1216($0;$1)
 	This:C1470.xpathFragments.push($1)
 	$0:=This:C1470
@@ -38,7 +38,7 @@ Function is //(/*String value*/)->XPathPredicate
 	C_TEXT:C284($1)
 	$0:=cs:C1710.XPathPredicate.new().static_equalTo($1).decorate(This:C1470)
 	
-Function atIndex //(/*int index*/)->XPathExpression
+Function atIndex // (/*int index*/)->XPathExpression
 	C_OBJECT:C1216($0)
 	C_LONGINT:C283($1)
 	$0:=cs:C1710.XPathPredicate.new().static_index($1).decorate(This:C1470)
